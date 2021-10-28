@@ -8,11 +8,11 @@
 
 #include "netdb.h"
 #include "arpa/inet.h"
-//defines
-#define h_addr h_addr_list[0] /* for backward compatibility */
-#define PORT 9002 // port number
-#define MAX 1000 //maximum buffer size
-//main function
+
+#define h_addr h_addr_list[0] 
+#define PORT 9002 
+#define MAX 1000 /
+
 int main(){
 char serverResponse[MAX];
 
@@ -21,10 +21,10 @@ char clientResponse[MAX];
 int socketDescriptor = socket(AF_INET, SOCK_STREAM, 0);
 
 char hostname[MAX], ipaddress[MAX];
-struct hostent *hostIP; //placeholder for the ip address
+struct hostent *hostIP;
 
 if(gethostname(hostname,sizeof(hostname))==0){
-hostIP = gethostbyname(hostname);//the netdb.h fucntion gethostbyname
+hostIP = gethostbyname(hostname);
 }else{
 printf("ERROR:FCC4539 IP Address Not");
 }
